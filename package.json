@@ -2,6 +2,9 @@
   "name": "dad-code-project",
   "version": "1.0.0",
   "main": "script.js",
+  "engines": {
+  "node": "18.x"
+},
   "dependencies": {
     "accepts": "^2.0.0",
     "agent-base": "^7.1.3",
@@ -170,9 +173,6 @@
     "type": "git",
     "url": "git+https://github.com/CIKing123/Invoice-mail.git"
   },
-  "puppeteer": {
-  "skipChromiumDownload": false
-},
   "keywords": [],
   "author": "",
   "license": "ISC",

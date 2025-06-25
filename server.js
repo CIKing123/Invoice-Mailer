@@ -32,12 +32,14 @@ app.post('/send-invoice', async (req, res) => {
 
   try {
     const browser = await puppeteer.launch({
-      headless: 'new',
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    });
+  executablePath: '/opt/render/project/.render/chrome/opt/google/chrome/chrome', // This is Render's path to Chromium
+  headless: true,
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+});
+
 
     const page = await browser.newPage();
-    await page.goto(`http://localhost:${PORT}/invoice`, {
+    await page.goto(`${process.env.PUBLIC_URL}/invoice`, {
       waitUntil: 'networkidle0',
     });
 
@@ -82,5 +84,5 @@ app.post('/send-invoice', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(`🚀 Server running at ${process.env.PUBLIC_URL}`);
 });

@@ -68,15 +68,16 @@ async function sendEmail() {
   // Now outerHTML will contain actual values
   const html = document.documentElement.outerHTML;
 
+  const BASE_URL = "http://localhost:3000";
   // 1. Send HTML to cache
-  await fetch("http://localhost:3000/cache-html", {
+  await fetch(`${BASE_URL}/cache-html`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ html }),
   });
 
   // 2. Generate PDF and send email
-  const response = await fetch("http://localhost:3000/send-invoice", {
+  const response = await fetch(`${BASE_URL}/send-invoice`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email }),

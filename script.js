@@ -68,7 +68,7 @@ async function sendEmail() {
   // Now outerHTML will contain actual values
   const html = document.documentElement.outerHTML;
 
-  const BASE_URL = "https://igwe-ind-invoice.onrender.com";
+  const BASE_URL = "http://localhost:3000";
 
   // 1. Send HTML to cache
   await fetch(`${BASE_URL}/cache-html`, {

@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: invoice-server
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PUBLIC_URL
+        value: https://igwe-ind-invoice.onrender.com
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASS
+        sync: false
+    plan: free

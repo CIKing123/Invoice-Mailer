@@ -32,7 +32,7 @@ app.post('/send-invoice', async (req, res) => {
 
   try {
     const browser = await puppeteer.launch({
-  executablePath: '/opt/render/project/.render/chrome/opt/google/chrome/chrome', // This is Render's path to Chromium
+  executablePath: new,
   headless: true,
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
 });

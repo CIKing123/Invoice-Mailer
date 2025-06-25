@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IGWE INDUSTRIES & TRADING CO. LTD.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="full-width-header">
+    <h1>IGWE INDUSTRIES & TRADING CO. LTD.</h1>
+  </div>
+
+  <div class="container">
+    <div class="client-info">
+      <label for="title">Title:</label>
+      <select id="title">
+        <option>Mr</option>
+        <option>Mrs</option>
+        <option>Ms</option>
+      </select>
+
+      <label for="client-name">Full Name:</label>
+      <input type="text" id="client-name" placeholder="Enter client name">
+
+      <label for="Date">Date:</label>
+      <input type="date" id="Date" placeholder="Enter the date here">
+    </div>
+
+    <div class="item-entry">
+      <h2>Add Item</h2>
+      <input type="number" id="qty" placeholder="Quantity">
+      <input type="text" id="description" placeholder="Description of Goods">
+      <input type="number" step="0.01" id="unit-price" placeholder="Unit Price">
+      <button onclick="addItem()">Add to Invoice</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Qty</th>
+          <th>Description of Goods</th>
+          <th>Unit Price</th>
+          <th>Naira</th>
+          <th>Kobo</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="invoice-items">
+        <!-- Rows will be added here -->
+      </tbody>
+    </table>
+
+    <div class="total">
+      <div class="total-text">
+        Goods received in good conditions are not returnable.
+        <p>No refund of money after payment.</p>
+        <p>Thanks and please call again.</p>
+      </div>
+      <table>
+        <tfoot>
+          <tr>
+            <td colspan="3"><strong>Total</strong></td>
+            <td colspan="2" id="total-amount">₦0.00</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <div class="actions">
+      <button onclick="window.print()">Print Invoice</button>
+
+      <label for="email">Send to Email:</label>
+      <input type="email" id="email" placeholder="Enter recipient email">
+      <button onclick="sendEmail()">Send</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div>
+      <span>
+        Office Address: 50, Aylara Street Surulere Lagos<br>
+        Telephone No.: +2348023210426, +2348033137157
+      </span>
+    </div>
+  </footer>
+
+</body>
+</html>

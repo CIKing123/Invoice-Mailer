@@ -1,0 +1,320 @@
+/* ========== FONTS ========== */
+@font-face {
+  font-family: 'HeadingFont';
+  src: url("fonts/ostrich-sans-master/OstrichSans-Heavy.otf") format('opentype');
+}
+
+@font-face {
+  font-family: 'H2Font';
+  src: url('fonts/ostrich-sans-master/OstrichSans-Bold.otf') format('opentype');
+}
+
+/* ========== GENERAL ========== */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #dbdbdb;
+  color: #000;
+  padding: 40px;
+  margin: 0;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/BicycleBackground.webp') no-repeat center center / cover;
+  opacity: 0.12;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ========== HEADERS ========== */
+h1, h2 {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'HeadingFont', sans-serif;
+  font-size: 100px;
+  font-weight: 100;
+  color: rgb(32, 23, 70);
+  text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+}
+
+h2 {
+  font-family: 'H2Font', sans-serif;
+  font-size: 24px;
+  color: rgb(58, 15, 15);
+  margin-top: 10px;
+}
+
+/* ========== CONTAINER ========== */
+.container {
+  max-width: 900px;
+  margin: 12px auto;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+/* ========== HEADER ========== */
+.full-width-header {
+  background-color: rgb(255, 144, 144);
+  color: white;
+  opacity: 0.9;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+/* ========== COMPANY INFO ========== */
+.company-info {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* ========== CLIENT INFO ========== */
+.client-info {
+  margin: 20px 0;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.client-info label {
+  margin-right: 5px;
+}
+
+.client-info select,
+.client-info input[type="text"],
+.client-info input[type="date"] {
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-style: italic;
+}
+
+.client-info select {
+  width: 70px;
+}
+
+.client-info input[type="text"],
+.client-info input[type="date"] {
+  width: 220px;
+}
+
+/* ========== ITEM ENTRY ========== */
+.item-entry {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.item-entry input[type="number"],
+.item-entry input[type="text"] {
+  padding: 6px;
+  font-size: 14px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 160px;
+  font-style: italic;
+}
+
+.item-entry button {
+  padding: 8px 14px;
+  background-color: #222266;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ========== TABLE STYLES ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+th, td {
+  border: 2px solid #4A90E2;
+  padding: 8px;
+  text-align: center;
+}
+
+.currencycell {
+  background-color: rgb(228, 138, 138);
+}
+
+.t-amount {
+  background-color: #fff4cc;
+  border: 2px solid #ffaa00;
+}
+
+.total-row td {
+  font-weight: bold;
+}
+
+/* ========== TOTAL SECTION ========== */
+.total {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.total table {
+  margin-top: 10px;
+  border: 10px solid rgb(23, 23, 85);
+  background-color: rgb(247, 196, 196);
+  border-radius: 2px;
+}
+
+.total-text {
+  font-weight: bolder;
+  color: rgb(28, 28, 124);
+  margin-left: 12px;
+  margin-bottom: 4px;
+}
+
+.total-text p {
+  margin: 1px;
+}
+
+/* ========== ACTION BUTTONS ========== */
+.actions {
+  margin-top: 30px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.actions input[type="email"] {
+  padding: 6px;
+  font-size: 14px;
+  font-style: italic;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 240px;
+}
+
+.actions button {
+  padding: 8px 14px;
+  background-color: navy;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  padding: 4px 8px;
+  background-color: #f36f61;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c0392b;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  margin-top:100px;
+  width: 100%;
+  background-color: #171127;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 14px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.footer div {
+  text-align: right;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+  color: #fff;
+  max-width: 500px;
+  width: 100%;
+}
+
+.footer div span {
+  display: inline-block;
+  border-top: 1px solid #261d3d;
+  margin-top: 40px;
+  width: 100%;
+  padding-top: 10px;
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+  body {
+    background: none;
+    color: black;
+  }
+  html, body {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+
+  .container {
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .actions,
+  .item-entry button,
+  button {
+    display: none !important;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+    background-color: #171127 !important;
+    color: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 10px 40px;
+  }
+}

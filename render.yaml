@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: invoice-mail
+    env: node
+    buildCommand: npm install && npx puppeteer browsers install chrome
+    startCommand: node server.js
+    envVars:
+      - key: EMAIL_USER
+        fromEnv: EMAIL_USER
+      - key: EMAIL_PASS
+        fromEnv: EMAIL_PASS
+      - key: PUBLIC_URL
+        fromEnv: PUBLIC_URL

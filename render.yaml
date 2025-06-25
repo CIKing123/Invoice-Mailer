@@ -2,6 +2,7 @@ services:
   - type: web
     name: invoice-mail
     env: node
+    plan: free
     buildCommand: npm install && npx puppeteer browsers install chrome
     startCommand: node server.js
     envVars:
